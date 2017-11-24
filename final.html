@@ -1,0 +1,166 @@
+<?php
+ /*Code for visitor counter */
+ $handler=fopen("visitor_counter.txt","r");
+ $visitor_counter=(int)fread($handler,20);
+ fclose($handler);
+ $visitor_counter++;
+ $handler=fopen("visitor_counter.txt","w");
+ fwrite($handler,$visitor_counter);
+ fclose($handler);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>home</title>
+<style>
+.div1
+{
+position:absolute;
+top:13%;
+right:1%;
+left:72%;
+width:345px;
+height:520px;
+background-color: white;
+ border: 5px solid red;
+}
+.div2
+{
+position:absolute;
+top:1%;
+Left:1%;
+width:1330px;
+height:60px;
+background-color: yellow;
+}
+
+.div2 h1
+{
+position:absolute;
+top:5%;
+left:25%;
+margin:10px;
+font-weight:bold;
+color:white;
+}
+.div3
+{
+position:absolute;
+top:1%;
+Left:1%;
+right:1%;
+width:330px;
+height:50px;
+background-color:Aquamarine ;
+}
+.div3 h2
+{ 
+position:absolute;
+top:5%;
+left:25%;
+margin:10px;
+font-weight:bold;
+color:white;
+}
+
+.user
+{
+width:325;
+height:200px;
+overflow:hidden;
+position:absolute;
+top:13%;
+right:3%;
+}
+.think
+{
+overflow:hidden;
+position:absolute;
+top:15%;
+right:20%;
+left:3%
+}
+.div4
+{
+position:absolute;
+top:88%;
+Left:3%;
+width:800px;
+height:60px;
+background-color: mistyrose ;
+}
+
+.div4 h2
+{
+position:absolute;
+top:5%;
+left:16%;
+margin:10px;
+font-weight:bold;
+color:deepskyblue;
+}
+#q1
+{ 
+position:absolute;
+top:58%;
+Left:2%;
+color:steelblue;
+font-size:30px;
+background-color: transparent;
+font-weight:bold;
+}
+#p3
+{ 
+position:absolute;
+top:68%;
+Left:2%;
+color:steelblue;
+font-size:30px;
+background-color: transparent;
+font-weight:bold;
+}
+
+#p2
+{ 
+position:absolute;
+top:78%;
+Left:2%;
+color:steelblue;
+font-size:30px;
+background-color: transparent;
+font-weight:bold;
+}
+#p4
+{ 
+position:absolute;
+top:88%;
+Left:2%;
+color:steelblue;
+font-size:30px;
+background-color: transparent;
+font-weight:bold;
+}
+
+
+</style>
+</head>
+<body>
+<div class="div1">
+<a id="q1" href="home2.html" target="self">1. About</a>
+<a id="p2" href="home1.html" target="self">3. Interesting Facts</a>
+<a id="p3" href="home3.html" target="self">2. Characters</a>
+<a id="p4" href="award.html" target="self">4. Achivements</a>
+<div class="div3">
+<h2>Visitor count=<?php echo $visitor_counter; ?></h2>
+</div>
+<img src="tmkoc4.jpg" class="user">
+</div>
+<div class="div2">
+<h1>Taarak Mehta Ka Ooltah Chashmah</h1>
+</div>
+<img src="tmkoc7.jpg" class="think">
+<div class="div4">
+<h2>DEVELOPED BY HARSHIT GUPTA</h2>
+</div>
+</body>
+</html>
